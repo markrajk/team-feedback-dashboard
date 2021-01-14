@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
-import Dropdown from '../common/Dropdown/Dropdown';
+import Dropdown from '../Dropdown/Dropdown';
 import { withStyles } from '@material-ui/core/styles';
 import { styles } from './NavbarStyles';
 
@@ -10,6 +10,7 @@ function Navbar(props) {
   const activeLine = useRef(null);
 
   function handleNavLinkClick(e) {
+    console.log('FIRED!!!');
     let el;
     if (e) {
       el = e.currentTarget;
@@ -27,6 +28,9 @@ function Navbar(props) {
 
   useEffect(() => {
     handleNavLinkClick();
+    window.addEventListener('resize', function () {
+      handleNavLinkClick();
+    });
   });
 
   return (
@@ -38,7 +42,7 @@ function Navbar(props) {
         <NavLink
           exact
           onClick={handleNavLinkClick}
-          to="/"
+          to="/giveFeedback"
           activeClassName="active"
           className={`nav-link ${classes.listItem}`}
         >
@@ -93,7 +97,7 @@ function Navbar(props) {
               </g>
             </g>
           </svg>
-          <p text="Feedback">Feedback</p>
+          <p text="Give feedback">Give feedback</p>
         </NavLink>
         <NavLink
           exact

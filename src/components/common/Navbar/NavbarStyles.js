@@ -8,6 +8,7 @@ export const styles = {
     justifyContent: 'space-between',
     boxShadow: '0 3px 6px 0 rgba(55, 109, 142, 0.16)',
     backgroundColor: '#ffffff',
+    zIndex: '1000',
   },
 
   options: {},
