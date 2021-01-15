@@ -9,5 +9,9 @@ export const styles = {
     '&.giveFeedback': {
       padding: '0 8.3%',
     },
+
+    '&.feedbackData': {
+      padding: '0 8.3%',
+    },
   },
 };

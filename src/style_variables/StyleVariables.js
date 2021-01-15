@@ -141,13 +141,13 @@ export const textVariables = {
       fontSize: '1.2rem',
       fontWeight: '400',
       letterSpacing: '-0.09px',
-      color: colorVariables.categories.blue,
+      color: colorVariables.colors.textPrimary,
     },
 
     footer: {
       fontSize: '1.1rem',
       fontWeight: '400',
-      color: colorVariables.categories.blue,
+      color: colorVariables.colors.textPrimary,
     },
   },
 

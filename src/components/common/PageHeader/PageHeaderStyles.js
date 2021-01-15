@@ -75,5 +75,9 @@ export const styles = {
         marginBottom: '2.4rem',
       },
     },
+
+    '&.feedbackData': {
+      '& .PageHeader-title': {},
+    },
   },
 };
