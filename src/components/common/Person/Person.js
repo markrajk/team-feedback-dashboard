@@ -6,7 +6,10 @@ function Person(props) {
   const { classes, showImg, img, initials, name, position } = props;
 
   return (
-    <div className={classes.root}>
+    <div
+      className={`modal-trigger ${classes.root}`}
+      target-modal="feedbackModal"
+    >
       {showImg ? (
         <img src={img} alt="User's profile image" className={classes.img} />
       ) : (

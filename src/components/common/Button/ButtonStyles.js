@@ -48,7 +48,7 @@ export const styles = {
 
     '&.medium': {
       ...textVariables.button.medium,
-      padding: '.0 1.7rem',
+      padding: '.85rem 1.7rem',
 
       '& i': {
         fontSize: 'inherit',

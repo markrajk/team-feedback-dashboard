@@ -1,15 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Main from '../../common/Main/Main';
 import PageHeader from '../../common/PageHeader/PageHeader';
 import People from '../../common/People/People';
 import Person from '../../common/Person/Person';
 import Button from '../../common/Button/Button';
 import Options from '../../common/Options/Options';
+import GiveFeedbackModal from '../../modals/GiveFeedbackModal';
+import { utilities } from '../../../utilities';
 import { withStyles } from '@material-ui/styles';
 import { styles } from './GiveFeedbackStyles';
 
 function GiveFeedback(props) {
   const { classes } = props;
+
+  useEffect(() => {
+    utilities.modalListener();
+  }, []);
 
   return (
     <Main page={'giveFeedback'}>
@@ -249,6 +255,8 @@ function GiveFeedback(props) {
           img="/img/p-01.png"
         />
       </People>
+
+      <GiveFeedbackModal />
     </Main>
   );
 }

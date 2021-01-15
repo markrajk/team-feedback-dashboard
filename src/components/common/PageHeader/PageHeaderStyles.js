@@ -38,6 +38,9 @@ export const styles = {
       justifyContent: 'space-between',
 
       '&-buttons': {
+        display: 'flex',
+        alignItems: 'center',
+
         '& > *:not(:last-child)': {
           marginRight: '1rem',
         },
