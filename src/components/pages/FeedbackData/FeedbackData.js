@@ -6,7 +6,7 @@ import { withStyles } from '@material-ui/styles';
 import { styles } from './FeedbackDataStyles';
 
 function FeedbackData(props) {
-  const { classes } = props;
+  const { classes, routeProps } = props;
 
   return (
     <Main page="feedbackData">
@@ -21,6 +21,7 @@ function FeedbackData(props) {
 
       <div className={classes.cardContainer}>
         <FeedbackDataCard
+          routeProps={routeProps}
           title={'Team Feedback'}
           reviews={6}
           charts={5}
@@ -33,6 +34,7 @@ function FeedbackData(props) {
         />
 
         <FeedbackDataCard
+          routeProps={routeProps}
           title={'P2P Feedback'}
           reviews={6}
           charts={5}
@@ -44,6 +46,7 @@ function FeedbackData(props) {
         />
 
         <FeedbackDataCard
+          routeProps={routeProps}
           title={'Supervisor Feedback'}
           reviews={6}
           charts={5}
@@ -56,6 +59,7 @@ function FeedbackData(props) {
         />
 
         <FeedbackDataCard
+          routeProps={routeProps}
           title={'Self Evaluations'}
           reviews={6}
           charts={5}
@@ -68,6 +72,7 @@ function FeedbackData(props) {
         />
 
         <FeedbackDataCard
+          routeProps={routeProps}
           title={'Subordinate Feedback'}
           reviews={6}
           charts={5}

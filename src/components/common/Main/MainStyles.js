@@ -13,5 +13,10 @@ export const styles = {
     '&.feedbackData': {
       padding: '0 8.3%',
     },
+
+    '&.widgets': {
+      padding: '0 3rem 5rem',
+      backgroundColor: '#f5f6f7',
+    },
   },
 };

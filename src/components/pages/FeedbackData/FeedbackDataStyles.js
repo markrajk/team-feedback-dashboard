@@ -1,4 +1,3 @@
-import sizes from '../../../sizes';
 export const styles = {
   root: {},
 

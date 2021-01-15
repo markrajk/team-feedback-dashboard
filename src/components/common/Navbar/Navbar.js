@@ -10,7 +10,6 @@ function Navbar(props) {
   const activeLine = useRef(null);
 
   function handleNavLinkClick(e) {
-    console.log('FIRED!!!');
     let el;
     if (e) {
       el = e.currentTarget;
@@ -19,11 +18,18 @@ function Navbar(props) {
     } else {
       el = document.querySelector('.nav-link.active');
     }
+
     let width = el.clientWidth;
     let x = el.offsetLeft;
     activeLine.current.style.opacity = '1';
     activeLine.current.style.width = `${width * 1.2}px`;
     activeLine.current.style.left = `${x - width * 0.1}px`;
+  }
+
+  function onPaths(paths) {
+    return (match, location) => {
+      return paths.includes(location.pathname);
+    };
   }
 
   useEffect(() => {
@@ -42,7 +48,8 @@ function Navbar(props) {
         <NavLink
           exact
           onClick={handleNavLinkClick}
-          to="/giveFeedback"
+          to={'/giveFeedback'}
+          isActive={onPaths(['/', '/giveFeedback'])}
           activeClassName="active"
           className={`nav-link ${classes.listItem}`}
         >
@@ -102,7 +109,8 @@ function Navbar(props) {
         <NavLink
           exact
           onClick={handleNavLinkClick}
-          to="/feedbackData"
+          to={'/feedbackData'}
+          isActive={onPaths(['/widgets', '/feedbackData'])}
           activeClassName="active"
           className={`nav-link ${classes.listItem}`}
         >

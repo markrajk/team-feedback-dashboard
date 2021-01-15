@@ -38,16 +38,17 @@ export const styles = {
 
     '&.small': {
       ...textVariables.button.small,
-      padding: '.6rem 1.5rem',
+      height: '2.6rem',
+      padding: '0 1.5rem',
 
       '& i': {
-        fontSize: 'inherit',
+        fontSize: '1.2em',
       },
     },
 
     '&.medium': {
       ...textVariables.button.medium,
-      padding: '.85rem 1.7rem',
+      padding: '.0 1.7rem',
 
       '& i': {
         fontSize: 'inherit',
@@ -56,10 +57,11 @@ export const styles = {
 
     '&.smallSquare': {
       ...textVariables.button.small,
-      padding: '.6rem',
+      height: '2.6rem',
+      width: '2.6rem',
 
       '& i': {
-        fontSize: 'inherit',
+        fontSize: '1.2em',
       },
     },
 
@@ -68,7 +70,7 @@ export const styles = {
       padding: '.85rem',
 
       '& i': {
-        fontSize: 'inherit',
+        fontSize: '1.2em',
       },
     },
   },

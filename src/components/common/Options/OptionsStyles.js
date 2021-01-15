@@ -10,8 +10,19 @@ export const styles = {
     justifyContent: 'flex-start',
     whiteSpace: 'nowrap',
 
+    '&.small': {
+      //backgroundColor: 'red!important',
+      '& .option': {
+        padding: '0 1.6rem',
+        height: '2.4rem',
+      },
+    },
+
     '& .option': {
       ...textVariables.button.medium,
+      display: 'inline-flex',
+      alignItems: 'center',
+      justifyContent: 'center',
       padding: '.85rem 1.6rem',
       fontWeight: '400',
       opacity: '.5',

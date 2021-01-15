@@ -19,7 +19,7 @@ function GiveFeedback(props) {
         </p>
         <p className="PageHeader-title">Give feedback</p>
         <div className="PageHeader-bottom">
-          <Options>
+          <Options size="medium" color="light">
             <div className="option active">All team members</div>
             <div className="option">My todo list</div>
           </Options>

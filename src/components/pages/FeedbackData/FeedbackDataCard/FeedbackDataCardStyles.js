@@ -21,6 +21,7 @@ export const styles = {
     border: `solid 1px ${colorVariables.categories.border}`,
     backgroundColor: colorVariables.colors.white,
     overflow: 'visible',
+    cursor: 'pointer',
 
     [sizes.down('xxl')]: {
       width: 'calc(33.333% - 3rem)',

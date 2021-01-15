@@ -4,7 +4,15 @@ import { withStyles } from '@material-ui/styles';
 import { styles } from './FeedbackDataCardStyles';
 
 function FeedbackDataCard(props) {
-  const { classes, title, reviews, charts, lastVisited, questions } = props;
+  const {
+    classes,
+    title,
+    reviews,
+    charts,
+    lastVisited,
+    questions,
+    routeProps,
+  } = props;
 
   const iconTextText = (
     <svg
@@ -109,8 +117,12 @@ function FeedbackDataCard(props) {
     });
   }
 
+  function handleClick() {
+    routeProps.history.push(`/widgets`);
+  }
+
   return (
-    <div className={classes.root}>
+    <div className={classes.root} onClick={handleClick}>
       <div className={classes.header}>
         <p className={classes.headerTitle}>{title}</p>
         <div className={classes.headerButtons}>
